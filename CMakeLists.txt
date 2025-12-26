@@ -9,22 +9,21 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt6 COMPONENTS Widgets Charts REQUIRED)
 
 add_executable(pricer_gui
-    main/main.cpp
-    src/MarketData.cpp
-    src/AutocallBase.cpp
-    src/AirbagAutocall.cpp
-    src/SimpleAutocall.cpp
-    src/MemoryPhoenixAutocall.cpp
-    src/StepDownAutocall.cpp
-    src/PhoenixAutocall.cpp
-    src/CliquetBase.cpp
-    src/CliquetMaxReturn.cpp
-    src/CliquetCappedCoupons.cpp
-    src/BlackScholesMC.cpp
-    src/HestonMC.cpp
-    src/FlatVol.cpp
-    src/InputUtils.cpp
-    src/PricerRunner.cpp
+        main/main.cpp
+        src/MarketData.cpp
+        src/AutocallBase.cpp
+        src/AirbagAutocall.cpp
+        src/SimpleAutocall.cpp
+        src/MemoryPhoenixAutocall.cpp
+        src/StepDownAutocall.cpp
+        src/PhoenixAutocall.cpp
+        src/CliquetBase.cpp
+        src/CliquetMaxReturn.cpp
+        src/CliquetCappedCoupons.cpp
+        src/BlackScholesMC.cpp
+        src/HestonMC.cpp
+        src/InputUtils.cpp
+        src/PricerRunner.cpp
 )
 
 target_include_directories(pricer_gui PRIVATE ${PROJECT_SOURCE_DIR}/include)
