@@ -1,4 +1,3 @@
-// Ratchet-style cliquet: pays max positive return vs spot0 at maturity.
 #pragma once
 
 #include "CliquetBase.hpp"
@@ -10,7 +9,7 @@ public:
                      double spot0,
                      double notional);
 
-private:
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
+protected:
+    // On implémente la logique spécifique ici, appelée par CliquetBase::cashFlows
+    double payoffImpl(const std::vector<double>& path) const override;
 };

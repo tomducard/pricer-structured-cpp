@@ -39,6 +39,7 @@
 #include <memory>
 #include <stdexcept>
 #include <vector>
+#include <algorithm> // Ajout nécessaire pour std::max
 
 // Minimal Qt window: handles user inputs, instantiates the chosen product/model,
 // runs pricing via PricerRunner, and renders a simple payoff chart.
@@ -294,7 +295,7 @@ PricerWindow::PricerWindow(QWidget* parent) : QWidget(parent) {
     auto* rightLayout = new QVBoxLayout(rightContainer);
     rightLayout->setContentsMargins(0, 0, 0, 0);
     rightLayout->setSpacing(10);
-    chartLabel_ = new QLabel("Terminal payoff (model-independent)");
+    chartLabel_ = new QLabel("Terminal payoff (linear scenario)");
     chartView_ = new QChartView(new QChart());
     chartView_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     chartView_->setRenderHint(QPainter::Antialiasing);
@@ -645,7 +646,8 @@ std::unique_ptr<StructuredProduct> PricerWindow::createProduct(
     return nullptr;
 }
 
-// Refresh the payoff chart. For cliquets, use a linear reference path to map ST to payoff.
+// Refresh the payoff chart.
+// Uses a simulated linear path (S0 -> ST) to estimate payoff for visualization.
 void PricerWindow::updatePayoffChart() {
     QChart* chart = chartView_->chart();
     try {
@@ -659,7 +661,7 @@ void PricerWindow::updatePayoffChart() {
             chartLabel_->setText(
                 "Cliquet payoff shown for a reference linear path (path-dependent)");
         } else {
-            chartLabel_->setText("Terminal payoff (model-independent)");
+            chartLabel_->setText("Terminal payoff (linear scenario)");
         }
 
         const double spot = std::max(inputs.spot, 1.0);
@@ -667,16 +669,39 @@ void PricerWindow::updatePayoffChart() {
         constexpr int samples = 200;
         auto* payoffSeries = new QLineSeries();
         payoffSeries->setName("Redemption");
+
         double minY = std::numeric_limits<double>::max();
         double maxYValue = std::numeric_limits<double>::lowest();
+
+        const auto& times = product->observationTimes();
+        const double finalTime = times.empty() ? 1.0 : times.back();
+
         for (int i = 0; i < samples; ++i) {
             const double st = maxSpot * static_cast<double>(i) /
                               static_cast<double>(samples - 1);
-            const double payoff = product->terminalRedemption(st);
-            payoffSeries->append(st, payoff);
-            minY = std::min(minY, payoff);
-            maxYValue = std::max(maxYValue, payoff);
+
+            // Build a synthetic linear path from S0 to ST
+            std::vector<double> path;
+            path.reserve(times.size());
+            for (double t : times) {
+                // S(t) = S0 + (ST - S0) * (t / T)
+                double val = inputs.spot + (st - inputs.spot) * (t / finalTime);
+                if (val < 0.0) val = 0.0;
+                path.push_back(val);
+            }
+
+            // Calculate total payoff (sum of all flows)
+            double totalPayoff = 0.0;
+            const auto flows = product->cashFlows(path);
+            for (const auto& f : flows) {
+                totalPayoff += f.amount;
+            }
+
+            payoffSeries->append(st, totalPayoff);
+            minY = std::min(minY, totalPayoff);
+            maxYValue = std::max(maxYValue, totalPayoff);
         }
+
         if (minY == maxYValue) {
             minY *= 0.9;
             maxYValue *= 1.1;
@@ -695,7 +720,7 @@ void PricerWindow::updatePayoffChart() {
         axisX->setTitleText("Terminal spot S_T");
         auto* axisY = new QValueAxis();
         axisY->setRange(minY, maxYValue);
-        axisY->setTitleText("Payoff (terminal redemption)");
+        axisY->setTitleText("Total Payoff (Redemption + Coupons)");
         chart->addAxis(axisX, Qt::AlignBottom);
         chart->addAxis(axisY, Qt::AlignLeft);
         payoffSeries->attachAxis(axisX);

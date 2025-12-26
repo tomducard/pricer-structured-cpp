@@ -1,4 +1,3 @@
-// Cliquet with capped positive coupons per period, summed at maturity.
 #pragma once
 
 #include "CliquetBase.hpp"
@@ -12,10 +11,10 @@ public:
                          double participation,
                          double cap);
 
-private:
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
+protected:
+    double payoffImpl(const std::vector<double>& path) const override;
 
+private:
     double participation_{};
     double cap_{};
 };
