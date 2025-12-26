@@ -15,10 +15,9 @@ AutocallBase::AutocallBase(std::string underlying,
       notional_(notional),
       couponRate_(couponRate),
       callBarrier_(callBarrier),
-      protectionBarrier_(protectionBarrier) {} // Plus de vérification stricte ici si on veut permettre des produits sans obs (ex: payoff immédiat)
+      protectionBarrier_(protectionBarrier) {}
 
 double AutocallBase::terminalRedemption(double spotT) const {
-    // Règle standard : Protection du capital si > barrière, sinon perte (PDI)
     if (spotT >= protectionBarrier_) {
         return notional_;
     }

@@ -12,7 +12,6 @@ public:
                     double protectionBarrier,
                     double couponBarrier);
 
-    // Override la nouvelle méthode
     std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
 
 private:

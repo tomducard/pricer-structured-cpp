@@ -1,6 +1,5 @@
 #include "PhoenixAutocall.hpp"
 #include <algorithm>
-#include <vector>
 
 PhoenixAutocall::PhoenixAutocall(std::string underlying,
                                  std::vector<double> observationTimes,
@@ -20,24 +19,19 @@ std::vector<CashFlow> PhoenixAutocall::cashFlows(const std::vector<double>& path
     const std::size_t steps = std::min(path.size(), obs.size());
 
     for (std::size_t i = 0; i < steps; ++i) {
-        // 1. Coupon conditionnel (Phoenix)
+        // Coupon
         if (path[i] >= couponBarrier_) {
             flows.push_back({notional() * couponRate(), obs[i]});
         }
-
-        // 2. Autocall
+        // Autocall
         if (path[i] >= callBarrier()) {
             flows.push_back({notional(), obs[i]});
-            return flows; // Le produit s'arrête
+            return flows;
         }
     }
 
-    // 3. Maturité (Protection Capital ou PDI)
+    // Maturité
     const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
-    const double maturityTime = obs.back();
-
-    // Note : On utilise la méthode helper de la classe de base pour le remboursement final
-    flows.push_back({terminalRedemption(finalSpot), maturityTime});
-
+    flows.push_back({terminalRedemption(finalSpot), obs.back()});
     return flows;
 }

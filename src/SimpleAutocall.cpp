@@ -18,20 +18,14 @@ std::vector<CashFlow> SimpleAutocall::cashFlows(const std::vector<double>& path)
     const std::size_t steps = std::min(path.size(), obs.size());
 
     for (std::size_t i = 0; i < steps; ++i) {
-        // Condition d'Autocall (Rappel anticipé)
         if (path[i] >= callBarrier()) {
-            // On paie le Nominal + le Coupon fixe
+            // Autocall : Nominal + Coupon
             flows.push_back({notional() * (1.0 + couponRate()), obs[i]});
-            return flows; // Le produit s'arrête ici
+            return flows;
         }
     }
 
-    // Si on arrive à maturité sans rappel
     const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
-    const double maturityTime = obs.back();
-
-    // Remboursement final (géré par la fonction helper de la classe de base ou manuellement)
-    flows.push_back({terminalRedemption(finalSpot), maturityTime});
-
+    flows.push_back({terminalRedemption(finalSpot), obs.back()});
     return flows;
 }

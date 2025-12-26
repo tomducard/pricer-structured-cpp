@@ -1,8 +1,5 @@
-// Step-down autocall: date-specific call barriers; coupon paid only if called.
 #pragma once
-
 #include "AutocallBase.hpp"
-
 #include <vector>
 
 class StepDownAutocall : public AutocallBase {
@@ -15,9 +12,8 @@ public:
                      std::vector<double> callBarriers,
                      double protectionBarrier);
 
-private:
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
+    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
 
+private:
     std::vector<double> callBarriers_;
 };

@@ -46,7 +46,7 @@ double runMonteCarlo(const StructuredProduct& product,
 
     std::vector<double> immediatePath{quote.spot};
 
-    // Cas sans observations (payoff immédiat)
+    // Cas sans observations
     if (times.empty()) {
         auto flows = product.cashFlows(immediatePath);
         double val = 0.0;
@@ -70,7 +70,6 @@ double runMonteCarlo(const StructuredProduct& product,
 
         double pathValue = 0.0;
         for (const auto& flow : flows) {
-            // Actualisation flux par flux
             pathValue += flow.amount * std::exp(-r * flow.time);
         }
 
@@ -88,9 +87,7 @@ double runMonteCarlo(const StructuredProduct& product,
 }
 } // namespace
 
-// Le reste de la fonction priceAutocall ne change pas
 PricingResults priceAutocall(const PricingInputs& inputs) {
-    // ... (Copiez le reste de votre fonction priceAutocall existante ici, elle est compatible)
     MarketData marketData;
     marketData.setRiskFreeRate(inputs.rate);
     marketData.setQuote(inputs.underlying,

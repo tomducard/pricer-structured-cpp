@@ -1,9 +1,6 @@
 #pragma once
-
 #include "StructuredProduct.hpp"
-
 #include <string>
-#include <utility>
 #include <vector>
 
 class CliquetBase : public StructuredProduct {
@@ -13,10 +10,9 @@ public:
                 double spot0,
                 double notional);
 
-    double payoff(const std::vector<double>& path) const override;
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
-    double terminalRedemption(double spotT) const override;
+    // Adaptation : Les cliquets renvoient un flux unique via CashFlow
+    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override final;
+
     const std::vector<double>& observationTimes() const override;
     const std::string& underlying() const override;
 
@@ -25,10 +21,10 @@ protected:
     double spot0() const { return spot0_; }
     double notional() const { return notional_; }
 
-private:
+    // Méthode interne pour calculer le montant final
     virtual double payoffImpl(const std::vector<double>& path) const = 0;
-    std::vector<double> buildReferencePath(double terminalSpot) const;
 
+private:
     std::string underlying_;
     std::vector<double> observationTimes_;
     double spot0_{};

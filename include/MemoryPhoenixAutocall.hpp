@@ -1,6 +1,4 @@
-// Memory phoenix: unpaid coupons accrue until a coupon barrier hit or call.
 #pragma once
-
 #include "AutocallBase.hpp"
 
 class MemoryPhoenixAutocall : public AutocallBase {
@@ -14,9 +12,8 @@ public:
                           double protectionBarrier,
                           double couponBarrier);
 
-private:
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
+    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
 
+private:
     double couponBarrier_{};
 };

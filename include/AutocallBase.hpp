@@ -1,5 +1,4 @@
 #pragma once
-
 #include "StructuredProduct.hpp"
 #include <vector>
 #include <string>
@@ -13,10 +12,6 @@ public:
                  double couponRate,
                  double callBarrier,
                  double protectionBarrier);
-
-    // Les enfants devront implémenter cashFlows directement
-    // virtual std::vector<CashFlow> cashFlows(const std::vector<double>& path) const = 0;
-    // ^ Déjà déclaré pur dans StructuredProduct
 
     const std::vector<double>& observationTimes() const override { return observationTimes_; }
     const std::string& underlying() const override { return underlying_; }

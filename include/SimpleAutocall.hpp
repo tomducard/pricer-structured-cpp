@@ -1,6 +1,4 @@
-// Basic autocall: single barrier, coupon paid only if called.
 #pragma once
-
 #include "AutocallBase.hpp"
 
 class SimpleAutocall : public AutocallBase {
@@ -13,7 +11,5 @@ public:
                    double callBarrier,
                    double protectionBarrier);
 
-private:
-    std::vector<CashFlow> cashFlows(
-        const std::vector<double>& path) const override;
+    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
 };
