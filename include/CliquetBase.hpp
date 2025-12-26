@@ -14,7 +14,7 @@ public:
                 double notional);
 
     double payoff(const std::vector<double>& path) const override;
-    std::pair<double, double> payoffAndPayTime(
+    std::vector<CashFlow> cashFlows(
         const std::vector<double>& path) const override;
     double terminalRedemption(double spotT) const override;
     const std::vector<double>& observationTimes() const override;

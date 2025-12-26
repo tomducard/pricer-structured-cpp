@@ -13,7 +13,8 @@ public:
                          double cap);
 
 private:
-    double payoffImpl(const std::vector<double>& path) const override;
+    std::vector<CashFlow> cashFlows(
+        const std::vector<double>& path) const override;
 
     double participation_{};
     double cap_{};

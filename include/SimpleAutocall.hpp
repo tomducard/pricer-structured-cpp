@@ -14,6 +14,6 @@ public:
                    double protectionBarrier);
 
 private:
-    std::pair<double, double> payoffAndPayTimeImpl(
+    std::vector<CashFlow> cashFlows(
         const std::vector<double>& path) const override;
 };

@@ -1,7 +1,6 @@
 #include "SimpleAutocall.hpp"
-
 #include <algorithm>
-#include <stdexcept>
+#include <vector>
 
 SimpleAutocall::SimpleAutocall(std::string underlying,
                                std::vector<double> observationTimes,
@@ -13,27 +12,26 @@ SimpleAutocall::SimpleAutocall(std::string underlying,
     : AutocallBase(std::move(underlying), std::move(observationTimes), spot0,
                    notional, couponRate, callBarrier, protectionBarrier) {}
 
-std::pair<double, double> SimpleAutocall::payoffAndPayTimeImpl(
-    const std::vector<double>& path) const {
+std::vector<CashFlow> SimpleAutocall::cashFlows(const std::vector<double>& path) const {
+    std::vector<CashFlow> flows;
     const auto& obs = times();
     const std::size_t steps = std::min(path.size(), obs.size());
-    if (steps == 0) {
-        throw std::runtime_error("path is empty");
-    }
 
     for (std::size_t i = 0; i < steps; ++i) {
+        // Condition d'Autocall (Rappel anticipé)
         if (path[i] >= callBarrier()) {
-            return {notional() * (1.0 + couponRate()), obs[i]};
+            // On paie le Nominal + le Coupon fixe
+            flows.push_back({notional() * (1.0 + couponRate()), obs[i]});
+            return flows; // Le produit s'arrête ici
         }
     }
 
-    const double finalSpot = path[steps - 1];
-    const double payTime = obs.back();
-    if (finalSpot >= protectionBarrier()) {
-        return {notional(), payTime};
-    }
-    if (spot0() <= 0.0) {
-        return {0.0, payTime};
-    }
-    return {notional() * (finalSpot / spot0()), payTime};
+    // Si on arrive à maturité sans rappel
+    const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
+    const double maturityTime = obs.back();
+
+    // Remboursement final (géré par la fonction helper de la classe de base ou manuellement)
+    flows.push_back({terminalRedemption(finalSpot), maturityTime});
+
+    return flows;
 }

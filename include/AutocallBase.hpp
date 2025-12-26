@@ -1,12 +1,8 @@
-// Base class for single-underlying autocall variants: stores common data and
-// provides shared payoff plumbing (payoff/discount timing, terminal redemption).
 #pragma once
 
 #include "StructuredProduct.hpp"
-
-#include <string>
-#include <utility>
 #include <vector>
+#include <string>
 
 class AutocallBase : public StructuredProduct {
 public:
@@ -18,32 +14,29 @@ public:
                  double callBarrier,
                  double protectionBarrier);
 
-    double payoff(const std::vector<double>& path) const override;
-    const std::vector<double>& observationTimes() const override;
-    const std::string& underlying() const override;
-    double terminalRedemption(double spotT) const override;
+    // Les enfants devront implémenter cashFlows directement
+    // virtual std::vector<CashFlow> cashFlows(const std::vector<double>& path) const = 0;
+    // ^ Déjà déclaré pur dans StructuredProduct
+
+    const std::vector<double>& observationTimes() const override { return observationTimes_; }
+    const std::string& underlying() const override { return underlying_; }
 
 protected:
-    const std::vector<double>& times() const { return observationTimes_; }
     double spot0() const { return spot0_; }
     double notional() const { return notional_; }
     double couponRate() const { return couponRate_; }
     double callBarrier() const { return callBarrier_; }
     double protectionBarrier() const { return protectionBarrier_; }
+    const std::vector<double>& times() const { return observationTimes_; }
 
-protected:
-    virtual std::pair<double, double> payoffAndPayTimeImpl(
-        const std::vector<double>& path) const = 0;
+    virtual double terminalRedemption(double spotT) const;
 
 private:
-    std::pair<double, double> payoffAndPayTime(
-        const std::vector<double>& path) const override;
-
     std::string underlying_;
     std::vector<double> observationTimes_;
-    double spot0_{};
-    double notional_{};
-    double couponRate_{};
-    double callBarrier_{};
-    double protectionBarrier_{};
+    double spot0_;
+    double notional_;
+    double couponRate_;
+    double callBarrier_;
+    double protectionBarrier_;
 };

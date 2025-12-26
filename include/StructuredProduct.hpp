@@ -2,17 +2,21 @@
 #pragma once
 
 #include <string>
-#include <utility>
 #include <vector>
+
+// Représente un flux financier (montant et date de paiement)
+struct CashFlow {
+    double amount;
+    double time;
+};
 
 class StructuredProduct {
 public:
     virtual ~StructuredProduct() = default;
 
-    virtual double payoff(const std::vector<double>& path) const = 0;
-    virtual std::pair<double, double> payoffAndPayTime(
-        const std::vector<double>& path) const = 0;
-    virtual double terminalRedemption(double spotT) const = 0;
+    // Renvoie la liste complète des flux générés par un scénario de marché
+    virtual std::vector<CashFlow> cashFlows(const std::vector<double>& path) const = 0;
+
     virtual const std::vector<double>& observationTimes() const = 0;
     virtual const std::string& underlying() const = 0;
 };

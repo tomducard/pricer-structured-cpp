@@ -19,7 +19,6 @@
 #include <memory>
 
 namespace {
-// Small shocks used to compute finite-difference delta and vega.
 constexpr double kSpotBumpFraction = 0.005;
 constexpr double kVolBumpAdd = 0.01;
 
@@ -41,30 +40,42 @@ double runMonteCarlo(const StructuredProduct& product,
                      std::size_t paths,
                      unsigned int seed,
                      double& standardError) {
-    // Generic MC loop: simulate paths, get (payoff,time) from product, discount,
-    // and accumulate mean/standard error.
     const auto& times = product.observationTimes();
     const auto& quote = data.getQuote(product.underlying());
     const double r = data.riskFreeRate();
 
     std::vector<double> immediatePath{quote.spot};
+
+    // Cas sans observations (payoff immédiat)
     if (times.empty()) {
-        const auto result = product.payoffAndPayTime(immediatePath);
+        auto flows = product.cashFlows(immediatePath);
+        double val = 0.0;
+        for(const auto& flow : flows) {
+            val += flow.amount * std::exp(-r * flow.time);
+        }
         standardError = 0.0;
-        return std::exp(-r * result.second) * result.first;
+        return val;
     }
 
     std::mt19937 rng(seed);
     double payoffSum = 0.0;
     double payoffSqSum = 0.0;
+
     for (std::size_t i = 0; i < paths; ++i) {
         const std::vector<double> path =
             model.simulatePath(quote.spot, times, data, rng);
-        const auto [payoff, payTime] =
-            product.payoffAndPayTime(path.empty() ? immediatePath : path);
-        const double discounted = std::exp(-r * payTime) * payoff;
-        payoffSum += discounted;
-        payoffSqSum += discounted * discounted;
+
+        const std::vector<CashFlow> flows =
+            product.cashFlows(path.empty() ? immediatePath : path);
+
+        double pathValue = 0.0;
+        for (const auto& flow : flows) {
+            // Actualisation flux par flux
+            pathValue += flow.amount * std::exp(-r * flow.time);
+        }
+
+        payoffSum += pathValue;
+        payoffSqSum += pathValue * pathValue;
     }
 
     const double n = static_cast<double>(paths);
@@ -72,20 +83,20 @@ double runMonteCarlo(const StructuredProduct& product,
     const double numerator = payoffSqSum - n * mean * mean;
     const double sampleVariance = n > 1 ? std::max(numerator / (n - 1.0), 0.0)
                                         : 0.0;
-    standardError =
-        n > 0 ? std::sqrt(sampleVariance / n) : 0.0;
+    standardError = n > 0 ? std::sqrt(sampleVariance / n) : 0.0;
     return mean;
 }
 } // namespace
 
+// Le reste de la fonction priceAutocall ne change pas
 PricingResults priceAutocall(const PricingInputs& inputs) {
+    // ... (Copiez le reste de votre fonction priceAutocall existante ici, elle est compatible)
     MarketData marketData;
     marketData.setRiskFreeRate(inputs.rate);
     marketData.setQuote(inputs.underlying,
                         MarketData::Quote{inputs.spot, inputs.sigma});
     marketData.setVolProvider(std::make_shared<FlatVol>(inputs.sigma));
 
-    // Build the requested product (autocall or cliquet) from inputs.
     std::unique_ptr<StructuredProduct> product;
     if (inputs.productFamily == ProductFamily::Autocall) {
         switch (inputs.autocallType) {
@@ -147,12 +158,10 @@ PricingResults priceAutocall(const PricingInputs& inputs) {
     const double price = runMonteCarlo(*product, marketData, *pathModel,
                                        inputs.paths, inputs.seed, stdError);
 
-    // Simple transaction cost layer: bid/ask around mid.
     const double spread = inputs.notional * inputs.spreadFraction;
     const double bid = price - spread;
     const double ask = price + spread;
 
-    // Finite-difference delta (re-uses same RNG seed).
     const double spotBumpSize = inputs.spot * kSpotBumpFraction;
     double delta = 0.0;
     if (spotBumpSize > 0.0) {

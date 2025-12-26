@@ -1,8 +1,8 @@
 #include "MemoryPhoenixAutocall.hpp"
-
 #include <algorithm>
-#include <stdexcept>
+#include <vector>
 
+// Constructeur (identique)
 MemoryPhoenixAutocall::MemoryPhoenixAutocall(
     std::string underlying,
     std::vector<double> observationTimes,
@@ -16,42 +16,37 @@ MemoryPhoenixAutocall::MemoryPhoenixAutocall(
                    notional, couponRate, callBarrier, protectionBarrier),
       couponBarrier_(couponBarrier) {}
 
-std::pair<double, double> MemoryPhoenixAutocall::payoffAndPayTimeImpl(
-    const std::vector<double>& path) const {
+std::vector<CashFlow> MemoryPhoenixAutocall::cashFlows(const std::vector<double>& path) const {
+    std::vector<CashFlow> flows;
     const auto& obs = times();
     const std::size_t steps = std::min(path.size(), obs.size());
-    if (steps == 0) {
-        throw std::runtime_error("path is empty");
-    }
 
     double accruedCoupons = 0.0;
-    double paidCoupons = 0.0;
-    const double couponAmount = couponRate() * notional();
+    const double couponAmount = notional() * couponRate();
 
     for (std::size_t i = 0; i < steps; ++i) {
         accruedCoupons += couponAmount;
 
+        // Effet Mémoire : on paie tout l'accumulé si condition remplie
         if (path[i] >= couponBarrier_) {
-            paidCoupons += accruedCoupons;
+            flows.push_back({accruedCoupons, obs[i]});
             accruedCoupons = 0.0;
         }
 
+        // Autocall
         if (path[i] >= callBarrier()) {
-            paidCoupons += accruedCoupons;
-            accruedCoupons = 0.0;
-            return {notional() * (1.0 + couponRate()) + paidCoupons, obs[i]};
+            // En cas d'autocall, on paie le capital.
+            // Note: Si le coupon n'a pas été payé juste au-dessus (barrière call < barrière coupon, rare),
+            // il est perdu ici. Si barrière call >= coupon, il a déjà été payé par le 'if' précédent.
+            flows.push_back({notional(), obs[i]});
+            return flows;
         }
     }
 
-    const double finalSpot = path[steps - 1];
-    const double payTime = obs.back();
-    paidCoupons += accruedCoupons;
-    if (finalSpot >= protectionBarrier()) {
-        return {notional() + paidCoupons, payTime};
-    }
-    if (spot0() <= 0.0) {
-        return {paidCoupons, payTime};
-    }
-    return {notional() * (finalSpot / spot0()) + paidCoupons, payTime};
-}
+    const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
+    const double maturityTime = obs.back();
 
+    flows.push_back({terminalRedemption(finalSpot), maturityTime});
+
+    return flows;
+}

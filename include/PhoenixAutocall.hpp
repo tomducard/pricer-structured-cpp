@@ -1,6 +1,4 @@
-// Phoenix autocall: accrues coupons above coupon barrier; calls on barrier breach.
 #pragma once
-
 #include "AutocallBase.hpp"
 
 class PhoenixAutocall : public AutocallBase {
@@ -14,9 +12,9 @@ public:
                     double protectionBarrier,
                     double couponBarrier);
 
-private:
-    std::pair<double, double> payoffAndPayTimeImpl(
-        const std::vector<double>& path) const override;
+    // Override la nouvelle méthode
+    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
 
+private:
     double couponBarrier_{};
 };

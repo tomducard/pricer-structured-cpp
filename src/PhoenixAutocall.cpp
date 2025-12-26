@@ -1,7 +1,6 @@
 #include "PhoenixAutocall.hpp"
-
 #include <algorithm>
-#include <stdexcept>
+#include <vector>
 
 PhoenixAutocall::PhoenixAutocall(std::string underlying,
                                  std::vector<double> observationTimes,
@@ -15,33 +14,30 @@ PhoenixAutocall::PhoenixAutocall(std::string underlying,
                    notional, couponRate, callBarrier, protectionBarrier),
       couponBarrier_(couponBarrier) {}
 
-std::pair<double, double> PhoenixAutocall::payoffAndPayTimeImpl(
-    const std::vector<double>& path) const {
+std::vector<CashFlow> PhoenixAutocall::cashFlows(const std::vector<double>& path) const {
+    std::vector<CashFlow> flows;
     const auto& obs = times();
     const std::size_t steps = std::min(path.size(), obs.size());
-    if (steps == 0) {
-        throw std::runtime_error("path is empty");
-    }
 
-    double couponAccrual = 0.0;
     for (std::size_t i = 0; i < steps; ++i) {
+        // 1. Coupon conditionnel (Phoenix)
         if (path[i] >= couponBarrier_) {
-            couponAccrual += couponRate() * notional();
+            flows.push_back({notional() * couponRate(), obs[i]});
         }
 
+        // 2. Autocall
         if (path[i] >= callBarrier()) {
-            return {notional() * (1.0 + couponRate()) + couponAccrual, obs[i]};
+            flows.push_back({notional(), obs[i]});
+            return flows; // Le produit s'arrête
         }
     }
 
-    const double finalSpot = path[steps - 1];
-    const double payTime = obs.back();
-    if (finalSpot >= protectionBarrier()) {
-        return {notional() + couponAccrual, payTime};
-    }
-    if (spot0() <= 0.0) {
-        return {couponAccrual, payTime};
-    }
-    return {notional() * (finalSpot / spot0()) + couponAccrual, payTime};
-}
+    // 3. Maturité (Protection Capital ou PDI)
+    const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
+    const double maturityTime = obs.back();
 
+    // Note : On utilise la méthode helper de la classe de base pour le remboursement final
+    flows.push_back({terminalRedemption(finalSpot), maturityTime});
+
+    return flows;
+}
