@@ -9,29 +9,31 @@ MemoryPhoenixAutocall::MemoryPhoenixAutocall(
                    notional, couponRate, callBarrier, protectionBarrier),
       couponBarrier_(couponBarrier) {}
 
-std::vector<CashFlow> MemoryPhoenixAutocall::cashFlows(const std::vector<double>& path) const {
-    std::vector<CashFlow> flows;
-    const auto& obs = times();
-    const std::size_t steps = std::min(path.size(), obs.size());
+double MemoryPhoenixAutocall::discountedPayoff(const std::vector<double> &path,
+                                               double riskFreeRate) const {
+  double totalValue = 0.0;
+  const auto &obs = times();
+  const std::size_t steps = std::min(path.size(), obs.size());
 
-    double accruedCoupons = 0.0;
-    const double periodicCoupon = notional() * couponRate();
+  double accruedCoupons = 0.0;
+  const double periodicCoupon = notional() * couponRate();
 
-    for (std::size_t i = 0; i < steps; ++i) {
-        accruedCoupons += periodicCoupon;
+  for (std::size_t i = 0; i < steps; ++i) {
+    accruedCoupons += periodicCoupon;
 
-        if (path[i] >= couponBarrier_) {
-            flows.push_back({accruedCoupons, obs[i]});
-            accruedCoupons = 0.0;
-        }
-
-        if (path[i] >= callBarrier()) {
-            flows.push_back({notional(), obs[i]});
-            return flows;
-        }
+    if (path[i] >= couponBarrier_) {
+      totalValue += accruedCoupons * std::exp(-riskFreeRate * obs[i]);
+      accruedCoupons = 0.0;
     }
 
-    const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
-    flows.push_back({terminalRedemption(finalSpot), obs.back()});
-    return flows;
+    if (path[i] >= callBarrier()) {
+      totalValue += notional() * std::exp(-riskFreeRate * obs[i]);
+      return totalValue;
+    }
+  }
+
+  const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
+  totalValue +=
+      terminalRedemption(finalSpot) * std::exp(-riskFreeRate * obs.back());
+  return totalValue;
 }

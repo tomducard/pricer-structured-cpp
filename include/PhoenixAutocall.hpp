@@ -3,17 +3,14 @@
 
 class PhoenixAutocall : public AutocallBase {
 public:
-    PhoenixAutocall(std::string underlying,
-                    std::vector<double> observationTimes,
-                    double spot0,
-                    double notional,
-                    double couponRate,
-                    double callBarrier,
-                    double protectionBarrier,
-                    double couponBarrier);
+  PhoenixAutocall(std::string underlying, std::vector<double> observationTimes,
+                  double spot0, double notional, double couponRate,
+                  double callBarrier, double protectionBarrier,
+                  double couponBarrier);
 
-    std::vector<CashFlow> cashFlows(const std::vector<double>& path) const override;
+  double discountedPayoff(const std::vector<double> &path,
+                          double riskFreeRate) const override;
 
 private:
-    double couponBarrier_{};
+  double couponBarrier_{};
 };
