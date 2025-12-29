@@ -9,7 +9,6 @@
 #include "CliquetMaxReturn.hpp"
 
 #include "BlackScholesMC.hpp"
-// #include "FlatVol.hpp"  <-- SUPPRIMÉ
 #include "HestonMC.hpp"
 #include "MarketData.hpp"
 #include "PathModel.hpp"
@@ -22,11 +21,11 @@ namespace {
 constexpr double kSpotBumpFraction = 0.005;
 constexpr double kVolBumpAdd = 0.01;
 
-// Factory helper pour créer le modèle avec les bons paramètres
+// Factory helper to create the model with the correct parameters
 std::unique_ptr<PathModelBase> makePathModel(const PricingInputs& inputs) {
     switch (inputs.modelType) {
     case ModelType::BlackScholes:
-        // On passe sigma directement au modèle BS
+        // Pass sigma directly to the BS model
         return std::make_unique<BlackScholesMC>(inputs.sigma);
     case ModelType::Heston:
         return std::make_unique<HestonMC>(inputs.hestonV0, inputs.hestonKappa,
@@ -43,7 +42,7 @@ double runMonteCarlo(const StructuredProduct& product,
                      unsigned int seed,
                      double& standardError) {
     const auto& times = product.observationTimes();
-    // On récupère le spot depuis MarketData
+    // Retrieve spot from MarketData
     const auto& quote = data.getQuote(product.underlying());
     const double r = data.riskFreeRate();
 
@@ -64,7 +63,7 @@ double runMonteCarlo(const StructuredProduct& product,
     double payoffSqSum = 0.0;
 
     for (std::size_t i = 0; i < paths; ++i) {
-        // Le modèle utilise quote.spot comme point de départ
+        // The model uses quote.spot as the starting point
         const std::vector<double> path =
             model.simulatePath(quote.spot, times, data, rng);
 
@@ -93,12 +92,12 @@ double runMonteCarlo(const StructuredProduct& product,
 PricingResults priceAutocall(const PricingInputs& inputs) {
     MarketData marketData;
     marketData.setRiskFreeRate(inputs.rate);
-    // On stocke spot et sigma dans MarketData, même si BS utilise son propre membre sigma désormais,
-    // c'est utile pour la cohérence ou si d'autres composants en ont besoin.
+    // Store spot and sigma in MarketData, even if BS uses its own sigma member now,
+    // this is useful for consistency or if other components need it.
     marketData.setQuote(inputs.underlying,
                         MarketData::Quote{inputs.spot, inputs.sigma});
 
-    // Plus besoin de setVolProvider here.
+    // No need for setVolProvider here.
 
     std::unique_ptr<StructuredProduct> product;
     if (inputs.productFamily == ProductFamily::Autocall) {
@@ -159,7 +158,7 @@ PricingResults priceAutocall(const PricingInputs& inputs) {
     double stdError = 0.0;
     auto pathModel = makePathModel(inputs);
 
-    // 1. Calcul du prix de base
+    // 1. Base price calculation
     const double price = runMonteCarlo(*product, marketData, *pathModel,
                                        inputs.paths, inputs.seed, stdError);
 
@@ -168,7 +167,7 @@ PricingResults priceAutocall(const PricingInputs& inputs) {
     const double bid = price - spread;
     const double ask = price + spread;
 
-    // 2. Calcul du Delta (Bump Spot)
+    // 2. Delta calculation (Bump Spot)
     const double spotBumpSize = inputs.spot * kSpotBumpFraction;
     double delta = 0.0;
     if (spotBumpSize > 0.0) {
@@ -178,24 +177,24 @@ PricingResults priceAutocall(const PricingInputs& inputs) {
         spotUp.setQuote(inputs.underlying, bumpedQuote);
 
         double ignore = 0.0;
-        // Note: Le modèle reste le même (paramètres inchangés), seul marketData change (spot)
+        // Note: The model remains the same (parameters unchanged), only MarketData changes (spot)
         const double bumpedPrice =
             runMonteCarlo(*product, spotUp, *pathModel, inputs.paths,
                           inputs.seed, ignore);
         delta = (bumpedPrice - price) / spotBumpSize;
     }
 
-    // 3. Calcul du Vega (Bump Volatilité)
+    // 3. Vega calculation (Bump Volatility)
     double vega = 0.0;
     double ignore = 0.0;
 
     if (inputs.modelType == ModelType::Heston) {
-        // LOGIQUE HESTON : On choque les paramètres du modèle (v0)
+        // HESTON LOGIC: Shock the model parameters (v0)
         PricingInputs bumpedInputs = inputs;
-        // On choque la variance initiale.
-        // Attention: kVolBumpAdd est prévu pour la volatilité (ex: +1%).
-        // Pour rester cohérent, on peut augmenter v0 de manière significative ou
-        // simplement appliquer le bump tel quel si l'utilisateur comprend que c'est une sensibilité à v0.
+        // Shock the initial variance.
+        // Warning: kVolBumpAdd is intended for volatility (e.g., +1%).
+        // To remain consistent, we can increase v0 significantly or
+        // simply apply the bump as is if the user understands it is a sensitivity to v0.
         bumpedInputs.hestonV0 += kVolBumpAdd;
 
         auto vegaModel = makePathModel(bumpedInputs);
@@ -204,14 +203,14 @@ PricingResults priceAutocall(const PricingInputs& inputs) {
         vega = (vegaPrice - price) / kVolBumpAdd;
 
     } else {
-        // LOGIQUE BLACK-SCHOLES : On choque le sigma
+        // BLACK-SCHOLES LOGIC: Shock the sigma
         PricingInputs bumpedInputs = inputs;
         bumpedInputs.sigma += kVolBumpAdd;
 
         auto vegaModel = makePathModel(bumpedInputs);
 
-        // Pour être sûr que tout soit cohérent, on met aussi à jour marketData
-        // (bien que notre nouveau BSMC utilise le sigma interne)
+        // To ensure consistency, we also update MarketData
+        // (although our new BSMC uses the internal sigma)
         MarketData volUp = marketData;
         auto q = volUp.getQuote(inputs.underlying);
         q.sigma += kVolBumpAdd;

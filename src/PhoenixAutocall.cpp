@@ -1,3 +1,4 @@
+// src/PhoenixAutocall.cpp
 #include "PhoenixAutocall.hpp"
 #include <algorithm>
 
@@ -19,18 +20,21 @@ std::vector<CashFlow> PhoenixAutocall::cashFlows(const std::vector<double>& path
     const std::size_t steps = std::min(path.size(), obs.size());
 
     for (std::size_t i = 0; i < steps; ++i) {
-        // Coupon
+        // 1. Check Autocall Condition
+        if (path[i] >= callBarrier()) {
+            // Early redemption: Notional + Coupon
+            flows.push_back({notional() * (1.0 + couponRate()), obs[i]});
+            return flows;
+        }
+
+        // 2. Check Coupon Condition (Phoenix specific)
+        // Even if not autocalled, we get a coupon if above couponBarrier
         if (path[i] >= couponBarrier_) {
             flows.push_back({notional() * couponRate(), obs[i]});
         }
-        // Autocall
-        if (path[i] >= callBarrier()) {
-            flows.push_back({notional(), obs[i]});
-            return flows;
-        }
     }
 
-    // Maturité
+    // Maturity
     const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
     flows.push_back({terminalRedemption(finalSpot), obs.back()});
     return flows;

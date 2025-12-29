@@ -19,7 +19,7 @@ std::vector<CashFlow> SimpleAutocall::cashFlows(const std::vector<double>& path)
 
     for (std::size_t i = 0; i < steps; ++i) {
         if (path[i] >= callBarrier()) {
-            // Autocall : Nominal + Coupon
+            // Autocall: Notional + Coupon
             flows.push_back({notional() * (1.0 + couponRate()), obs[i]});
             return flows;
         }

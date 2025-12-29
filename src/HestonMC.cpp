@@ -3,50 +3,59 @@
 #include <algorithm>
 #include <cmath>
 #include <random>
-#include <vector>
 
 HestonMC::HestonMC(double v0, double kappa, double theta, double xi, double rho)
     : v0_(v0), kappa_(kappa), theta_(theta), xi_(xi), rho_(rho) {}
 
-std::vector<double> HestonMC::simulatePath(
-    double spot0,
-    const std::vector<double>& times,
-    const MarketData& data,
-    std::mt19937& rng) const {
-    // Simple Euler scheme with full-truncation variance, correlated normals.
+std::vector<double> HestonMC::simulatePath(double spot0,
+                                           const std::vector<double>& times,
+                                           const MarketData& data,
+                                           std::mt19937& rng) const {
     std::vector<double> path(times.size());
-    if (times.empty()) {
-        return path;
-    }
+    const double r = data.riskFreeRate();
 
     std::normal_distribution<double> dist(0.0, 1.0);
-    const double r = data.riskFreeRate();
+
     double spot = spot0;
-    double var = std::max(v0_, 0.0);
+    double v = v0_; // Current variance state
     double prevTime = 0.0;
 
+    // Use a finer time step for simulation accuracy (sub-stepping)
+    // to avoid discretization errors with the stochastic volatility.
+    const double dtStep = 0.01; // Max time step size
+
     for (std::size_t i = 0; i < times.size(); ++i) {
-        const double dt = std::max(times[i] - prevTime, 0.0);
-        if (dt > 0.0) {
-            const double z1 = dist(rng);
-            const double z2 = dist(rng);
-            const double zVar =
-                rho_ * z1 + std::sqrt(std::max(1.0 - rho_ * rho_, 0.0)) * z2;
+        double currentTime = prevTime;
+        const double targetTime = times[i];
 
-            const double sqrtVar = std::sqrt(std::max(var, 0.0));
-            const double varianceDrift = kappa_ * (theta_ - var) * dt;
-            const double varianceDiff = xi_ * sqrtVar * std::sqrt(dt) * zVar;
-            var = std::max(var + varianceDrift + varianceDiff, 0.0);
-            const double spotDiffusionVar = std::max(var, 0.0);
+        while (currentTime < targetTime) {
+            // Calculate actual time step for this iteration
+            const double dt = std::min(dtStep, targetTime - currentTime);
+            if (dt <= 1e-8) break;
 
-            const double drift = (r - 0.5 * spotDiffusionVar) * dt;
-            const double diffusion =
-                std::sqrt(spotDiffusionVar) * std::sqrt(dt) * z1;
-            spot *= std::exp(drift + diffusion);
+            // Generate correlated Brownian motions
+            const double z1 = dist(rng); // For spot
+            const double z2 = dist(rng); // Uncorrelated
+            // Correlated noise for variance:
+            const double zv = rho_ * z1 + std::sqrt(1.0 - rho_ * rho_) * z2;
+
+            // Update Variance (using Reflection or Truncation to keep v >= 0)
+            // Here we use a simple full truncation scheme for stability:
+            const double v_plus = std::max(v, 0.0);
+            const double sqrt_v = std::sqrt(v_plus);
+
+            // dv = kappa * (theta - v) * dt + xi * sqrt(v) * dW_v
+            v += kappa_ * (theta_ - v_plus) * dt + xi_ * sqrt_v * std::sqrt(dt) * zv;
+
+            // Update Spot
+            // dS = S * r * dt + S * sqrt(v) * dW_s
+            spot *= std::exp((r - 0.5 * v_plus) * dt + sqrt_v * std::sqrt(dt) * z1);
+
+            currentTime += dt;
         }
 
         path[i] = spot;
-        prevTime = times[i];
+        prevTime = targetTime;
     }
 
     return path;

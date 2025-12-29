@@ -1,6 +1,4 @@
 #include "AutocallBase.hpp"
-#include <algorithm>
-#include <utility>
 
 AutocallBase::AutocallBase(std::string underlying,
                            std::vector<double> observationTimes,
@@ -9,20 +7,17 @@ AutocallBase::AutocallBase(std::string underlying,
                            double couponRate,
                            double callBarrier,
                            double protectionBarrier)
-    : underlying_(std::move(underlying)),
-      observationTimes_(std::move(observationTimes)),
-      spot0_(spot0),
-      notional_(notional),
-      couponRate_(couponRate),
-      callBarrier_(callBarrier),
-      protectionBarrier_(protectionBarrier) {}
+    : StructuredProduct(std::move(underlying), std::move(observationTimes)),
+      notional_(notional), couponRate_(couponRate),
+      callBarrier_(callBarrier), protectionBarrier_(protectionBarrier),
+      spot0_(spot0) {}
 
-double AutocallBase::terminalRedemption(double spotT) const {
-    if (spotT >= protectionBarrier_) {
+double AutocallBase::terminalRedemption(double finalSpot) const {
+    // If the final spot is above the protection barrier,
+    // capital is guaranteed (plus potentially the last coupon, handled in derived classes).
+    if (finalSpot >= protectionBarrier_) {
         return notional_;
     }
-    if (spot0_ <= 0.0) {
-        return 0.0;
-    }
-    return notional_ * (spotT / spot0_);
+    // Capital at risk: The investor loses money proportional to the spot drop.
+    return notional_ * (finalSpot / spot0_);
 }
