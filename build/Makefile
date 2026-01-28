@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured
+CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build
+CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -347,30 +347,6 @@ src/CliquetMaxReturn.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pricer_gui.dir/build.make CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.s
 .PHONY : src/CliquetMaxReturn.cpp.s
 
-src/FlatVol.o: src/FlatVol.cpp.o
-.PHONY : src/FlatVol.o
-
-# target to build an object file
-src/FlatVol.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pricer_gui.dir/build.make CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o
-.PHONY : src/FlatVol.cpp.o
-
-src/FlatVol.i: src/FlatVol.cpp.i
-.PHONY : src/FlatVol.i
-
-# target to preprocess a source file
-src/FlatVol.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pricer_gui.dir/build.make CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.i
-.PHONY : src/FlatVol.cpp.i
-
-src/FlatVol.s: src/FlatVol.cpp.s
-.PHONY : src/FlatVol.s
-
-# target to generate assembly for a file
-src/FlatVol.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pricer_gui.dir/build.make CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.s
-.PHONY : src/FlatVol.cpp.s
-
 src/HestonMC.o: src/HestonMC.cpp.o
 .PHONY : src/HestonMC.o
 
@@ -598,9 +574,6 @@ help:
 	@echo "... src/CliquetMaxReturn.o"
 	@echo "... src/CliquetMaxReturn.i"
 	@echo "... src/CliquetMaxReturn.s"
-	@echo "... src/FlatVol.o"
-	@echo "... src/FlatVol.i"
-	@echo "... src/FlatVol.s"
 	@echo "... src/HestonMC.o"
 	@echo "... src/HestonMC.i"
 	@echo "... src/HestonMC.s"

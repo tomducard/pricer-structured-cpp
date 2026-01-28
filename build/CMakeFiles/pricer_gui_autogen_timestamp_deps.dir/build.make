@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured
+CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build
+CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build
 
 # Utility rule file for pricer_gui_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/depend:
-	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui_autogen_timestamp_deps
+	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui_autogen_timestamp_deps
 .PHONY : CMakeFiles/pricer_gui_autogen_timestamp_deps.dir/depend
 

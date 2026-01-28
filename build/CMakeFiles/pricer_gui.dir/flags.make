@@ -4,7 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/include -I/Users/tomducard/Documents/ENSAE/C++/pricer-structured/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/lib/QtCore.framework/Headers -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtCharts.framework/Headers -isystem /opt/homebrew/lib/QtOpenGL.framework/Headers -isystem /opt/homebrew/lib/QtOpenGLWidgets.framework/Headers
+CXX_INCLUDES = -I/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/include -I/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/lib/QtCore.framework/Headers -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtCharts.framework/Headers -isystem /opt/homebrew/lib/QtOpenGL.framework/Headers -isystem /opt/homebrew/lib/QtOpenGLWidgets.framework/Headers
 
-CXX_FLAGS = -std=c++17
+CXX_FLAGSarm64 = -std=c++17 -arch arm64
+
+CXX_FLAGS = -std=c++17 -arch arm64
 

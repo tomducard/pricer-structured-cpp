@@ -1,7 +1,7 @@
 CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetBase.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetBase.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

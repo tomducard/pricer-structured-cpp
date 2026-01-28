@@ -26,4 +26,4 @@ double SimpleAutocall::discountedPayoff(const std::vector<double> &path,
   const double finalSpot = (steps > 0) ? path[steps - 1] : spot0();
   double amount = terminalRedemption(finalSpot);
   return amount * std::exp(-riskFreeRate * obs.back());
-}
+} 

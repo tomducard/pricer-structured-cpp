@@ -1,8 +1,8 @@
 CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PhoenixAutocall.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PhoenixAutocall.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

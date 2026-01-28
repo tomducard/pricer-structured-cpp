@@ -1,6 +1,6 @@
 CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PricerRunner.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PricerRunner.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PricerRunner.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PricerRunner.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -753,20 +753,19 @@ CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AirbagAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/MemoryPhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/SimpleAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StepDownAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetCappedCoupons.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetMaxReturn.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/BlackScholesMC.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PathModel.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/MarketData.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/IVolProvider.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AirbagAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetCappedCoupons.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetMaxReturn.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/MemoryPhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/SimpleAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StepDownAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/BlackScholesMC.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PathModel.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/MarketData.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table \
@@ -843,5 +842,4 @@ CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/FlatVol.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/HestonMC.hpp
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/HestonMC.hpp

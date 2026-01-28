@@ -18,8 +18,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o.d"
   "CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o"
   "CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o.d"
-  "CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o"
-  "CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o.d"
   "CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o"
   "CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o.d"
   "CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o"

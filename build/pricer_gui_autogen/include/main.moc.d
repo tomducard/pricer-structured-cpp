@@ -1,5 +1,5 @@
-/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/include/main.moc: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/moc_predefs.h \
+/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/include/main.moc: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -729,18 +729,18 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AirbagAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetCappedCoupons.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetMaxReturn.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/InputUtils.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/MemoryPhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PricerRunner.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/SimpleAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StepDownAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AirbagAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetCappedCoupons.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetMaxReturn.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/InputUtils.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/MemoryPhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PricerRunner.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/SimpleAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StepDownAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/QList \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/QMargins \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/QObject \

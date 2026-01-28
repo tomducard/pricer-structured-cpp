@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured
+CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build
+CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pricer_gui.dir/depend.make
@@ -71,9 +71,9 @@ include CMakeFiles/pricer_gui.dir/flags.make
 
 pricer_gui_autogen/timestamp: /opt/homebrew/share/qt/libexec/moc
 pricer_gui_autogen/timestamp: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pricer_gui"
-	/opt/homebrew/bin/cmake -E cmake_autogen /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles/pricer_gui_autogen.dir/AutogenInfo.json ""
-	/opt/homebrew/bin/cmake -E touch /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pricer_gui"
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles/pricer_gui_autogen.dir/AutogenInfo.json ""
+	/opt/homebrew/bin/cmake -E touch /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/timestamp
 
 CMakeFiles/pricer_gui.dir/codegen:
 .PHONY : CMakeFiles/pricer_gui.dir/codegen
@@ -81,240 +81,226 @@ CMakeFiles/pricer_gui.dir/codegen:
 CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
 CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o: pricer_gui_autogen/mocs_compilation.cpp
 CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/mocs_compilation.cpp
 
 CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/mocs_compilation.cpp > CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/mocs_compilation.cpp > CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/mocs_compilation.cpp -o CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/mocs_compilation.cpp -o CMakeFiles/pricer_gui.dir/pricer_gui_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/pricer_gui.dir/main/main.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/main/main.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp
+CMakeFiles/pricer_gui.dir/main/main.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp
 CMakeFiles/pricer_gui.dir/main/main.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pricer_gui.dir/main/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/main/main.cpp.o -MF CMakeFiles/pricer_gui.dir/main/main.cpp.o.d -o CMakeFiles/pricer_gui.dir/main/main.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pricer_gui.dir/main/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/main/main.cpp.o -MF CMakeFiles/pricer_gui.dir/main/main.cpp.o.d -o CMakeFiles/pricer_gui.dir/main/main.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp
 
 CMakeFiles/pricer_gui.dir/main/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/main/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp > CMakeFiles/pricer_gui.dir/main/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp > CMakeFiles/pricer_gui.dir/main/main.cpp.i
 
 CMakeFiles/pricer_gui.dir/main/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/main/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp -o CMakeFiles/pricer_gui.dir/main/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp -o CMakeFiles/pricer_gui.dir/main/main.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MarketData.cpp
+CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MarketData.cpp
 CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o -MF CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MarketData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o -MF CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/MarketData.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MarketData.cpp
 
 CMakeFiles/pricer_gui.dir/src/MarketData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/MarketData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MarketData.cpp > CMakeFiles/pricer_gui.dir/src/MarketData.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MarketData.cpp > CMakeFiles/pricer_gui.dir/src/MarketData.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/MarketData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/MarketData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MarketData.cpp -o CMakeFiles/pricer_gui.dir/src/MarketData.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MarketData.cpp -o CMakeFiles/pricer_gui.dir/src/MarketData.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AutocallBase.cpp
+CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AutocallBase.cpp
 CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o -MF CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AutocallBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o -MF CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AutocallBase.cpp
 
 CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AutocallBase.cpp > CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AutocallBase.cpp > CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AutocallBase.cpp -o CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AutocallBase.cpp -o CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AirbagAutocall.cpp
+CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AirbagAutocall.cpp
 CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AirbagAutocall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AirbagAutocall.cpp
 
 CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AirbagAutocall.cpp > CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AirbagAutocall.cpp > CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AirbagAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AirbagAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/SimpleAutocall.cpp
+CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/SimpleAutocall.cpp
 CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/SimpleAutocall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/SimpleAutocall.cpp
 
 CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/SimpleAutocall.cpp > CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/SimpleAutocall.cpp > CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/SimpleAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/SimpleAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/SimpleAutocall.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MemoryPhoenixAutocall.cpp
+CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MemoryPhoenixAutocall.cpp
 CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MemoryPhoenixAutocall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MemoryPhoenixAutocall.cpp
 
 CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MemoryPhoenixAutocall.cpp > CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MemoryPhoenixAutocall.cpp > CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/MemoryPhoenixAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/MemoryPhoenixAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/MemoryPhoenixAutocall.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/StepDownAutocall.cpp
+CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/StepDownAutocall.cpp
 CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/StepDownAutocall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/StepDownAutocall.cpp
 
 CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/StepDownAutocall.cpp > CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/StepDownAutocall.cpp > CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/StepDownAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/StepDownAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/StepDownAutocall.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PhoenixAutocall.cpp
+CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PhoenixAutocall.cpp
 CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PhoenixAutocall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o -MF CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PhoenixAutocall.cpp
 
 CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PhoenixAutocall.cpp > CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PhoenixAutocall.cpp > CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PhoenixAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PhoenixAutocall.cpp -o CMakeFiles/pricer_gui.dir/src/PhoenixAutocall.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetBase.cpp
+CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetBase.cpp
 CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetBase.cpp
 
 CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetBase.cpp > CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetBase.cpp > CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetBase.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetBase.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetBase.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetMaxReturn.cpp
+CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetMaxReturn.cpp
 CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetMaxReturn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetMaxReturn.cpp
 
 CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetMaxReturn.cpp > CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetMaxReturn.cpp > CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetMaxReturn.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetMaxReturn.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetCappedCoupons.cpp
+CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetCappedCoupons.cpp
 CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetCappedCoupons.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o -MF CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetCappedCoupons.cpp
 
 CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetCappedCoupons.cpp > CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetCappedCoupons.cpp > CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/CliquetCappedCoupons.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/CliquetCappedCoupons.cpp -o CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/BlackScholesMC.cpp
+CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/BlackScholesMC.cpp
 CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o -MF CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/BlackScholesMC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o -MF CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/BlackScholesMC.cpp
 
 CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/BlackScholesMC.cpp > CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/BlackScholesMC.cpp > CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/BlackScholesMC.cpp -o CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/BlackScholesMC.cpp -o CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/HestonMC.cpp
+CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/HestonMC.cpp
 CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o -MF CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/HestonMC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o -MF CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/HestonMC.cpp
 
 CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/HestonMC.cpp > CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/HestonMC.cpp > CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/HestonMC.cpp -o CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.s
-
-CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/FlatVol.cpp
-CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o -MF CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/FlatVol.cpp
-
-CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/FlatVol.cpp > CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.i
-
-CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/FlatVol.cpp -o CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/HestonMC.cpp -o CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/InputUtils.cpp
+CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/InputUtils.cpp
 CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o -MF CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/InputUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o -MF CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/InputUtils.cpp
 
 CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/InputUtils.cpp > CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/InputUtils.cpp > CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/InputUtils.cpp -o CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/InputUtils.cpp -o CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.s
 
 CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: CMakeFiles/pricer_gui.dir/flags.make
-CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PricerRunner.cpp
+CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PricerRunner.cpp
 CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o: CMakeFiles/pricer_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o -MF CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PricerRunner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o -MF CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o.d -o CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o -c /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PricerRunner.cpp
 
 CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PricerRunner.cpp > CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PricerRunner.cpp > CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.i
 
 CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/PricerRunner.cpp -o CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/PricerRunner.cpp -o CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.s
 
 # Object files for target pricer_gui
 pricer_gui_OBJECTS = \
@@ -332,7 +318,6 @@ pricer_gui_OBJECTS = \
 "CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o" \
 "CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o" \
 "CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o" \
-"CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o" \
 "CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o" \
 "CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o"
 
@@ -353,7 +338,6 @@ pricer_gui: CMakeFiles/pricer_gui.dir/src/CliquetMaxReturn.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/src/CliquetCappedCoupons.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/src/BlackScholesMC.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/src/HestonMC.cpp.o
-pricer_gui: CMakeFiles/pricer_gui.dir/src/FlatVol.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/src/InputUtils.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/src/PricerRunner.cpp.o
 pricer_gui: CMakeFiles/pricer_gui.dir/build.make
@@ -364,7 +348,7 @@ pricer_gui: /opt/homebrew/lib/QtOpenGL.framework/Versions/A/QtOpenGL
 pricer_gui: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 pricer_gui: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 pricer_gui: CMakeFiles/pricer_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable pricer_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable pricer_gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pricer_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -376,6 +360,6 @@ CMakeFiles/pricer_gui.dir/clean:
 .PHONY : CMakeFiles/pricer_gui.dir/clean
 
 CMakeFiles/pricer_gui.dir/depend: pricer_gui_autogen/timestamp
-	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles/pricer_gui.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui
+	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles/pricer_gui.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui
 .PHONY : CMakeFiles/pricer_gui.dir/depend
 

@@ -1,8 +1,8 @@
 CMakeFiles/pricer_gui.dir/src/AirbagAutocall.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AirbagAutocall.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AirbagAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AirbagAutocall.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AirbagAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

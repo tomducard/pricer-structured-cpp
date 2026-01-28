@@ -1,7 +1,7 @@
 CMakeFiles/pricer_gui.dir/src/AutocallBase.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/src/AutocallBase.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/src/AutocallBase.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

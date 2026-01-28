@@ -1,6 +1,8 @@
 CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/main/main.cpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/InputUtils.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/main/main.cpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AirbagAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/AutocallBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StructuredProduct.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -753,21 +755,19 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AirbagAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/AutocallBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StructuredProduct.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetCappedCoupons.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetBase.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/CliquetMaxReturn.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/MemoryPhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PhoenixAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/SimpleAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/StepDownAutocall.hpp \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/include/PricerRunner.hpp \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QAbstractAxis \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qabstractaxis.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QChartGlobal \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qchartglobal.h \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetCappedCoupons.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetBase.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/CliquetMaxReturn.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/InputUtils.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/MemoryPhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PhoenixAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/PricerRunner.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/SimpleAutocall.hpp \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/include/StepDownAutocall.hpp \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtguiglobal.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qglobal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
@@ -821,11 +821,13 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qtresource.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qttranslation.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qversiontagging.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qtcharts-config.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qtchartsexports.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QPen \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtgui-config.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtguiexports.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcompare.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstdlibdetection.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcomparehelpers.h \
@@ -855,9 +857,6 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/default_searcher.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/not_fn.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qhashfunctions.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringview.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbytearray.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qrefcount.h \
@@ -884,6 +883,15 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringbuilder.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter_base.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreevent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qhashfunctions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
@@ -900,52 +908,18 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/execution \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtguiglobal.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtgui-config.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtguiexports.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qcolor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgb.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiterator.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbytearraylist.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qalgorithms.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringmatcher.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgba64.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qbrush.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qpoint.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qimage.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qrect.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qmargins.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qsize.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixelformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtransform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpolygon.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qregion.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdatastream.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevicebase.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qspan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/lib/QtCore.framework/Headers/q20iterator.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qline.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixmap.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QFont \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmath.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtformat_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
-  /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiterable.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmetacontainer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcontainerinfo.h \
@@ -954,14 +928,49 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobject_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qbindingstorage.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
+  /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qelapsedtimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qpoint.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qsize.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmargins.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpixmap.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpaintdevice.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qrect.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qcolor.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qrgb.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qrgba64.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qimage.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpixelformat.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtransform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpolygon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qregion.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qspan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/lib/QtCore.framework/Headers/q20iterator.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qline.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcontiguouscache.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qsharedpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /opt/homebrew/lib/QtCore.framework/Headers/qmap.h \
@@ -969,33 +978,9 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qset.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qhash.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobject_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qbindingstorage.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QObject \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QChart \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qchart.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QAbstractSeries \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qabstractseries.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QLegend \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qlegend.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicswidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicslayoutitem.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcoreevent.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qelapsedtimer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qeventpoint.h \
@@ -1005,51 +990,26 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qinputdevice.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qscreen.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QList \
+  /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QRect \
   /opt/homebrew/lib/QtCore.framework/Headers/QSize \
   /opt/homebrew/lib/QtCore.framework/Headers/QSizeF \
   /opt/homebrew/lib/QtGui.framework/Headers/QTransform \
-  /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qscreen_platform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpainterpath.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpalette.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QBrush \
-  /opt/homebrew/lib/QtCore.framework/Headers/QMargins \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QChartView \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qchartview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsView \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsview.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpainter.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontinfo.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontvariableaxis.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontmetrics.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QLineSeries \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qlineseries.h \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QXYSeries \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qxyseries.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QImage \
-  /opt/homebrew/lib/QtCharts.framework/Headers/QValueAxis \
-  /opt/homebrew/lib/QtCharts.framework/Headers/qvalueaxis.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QCloseEvent \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpalette.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qbrush.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontmetrics.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontinfo.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontvariableaxis.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstyleoption.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
@@ -1061,6 +1021,7 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFormLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qformlayout.h \
@@ -1081,21 +1042,60 @@ CMakeFiles/pricer_gui.dir/main/main.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QPen \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollArea \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QSettings \
   /opt/homebrew/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSizePolicy \
+  /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
-  /opt/homebrew/lib/QtCore.framework/Headers/QString \
-  /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/include/main.moc \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QAbstractAxis \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qabstractaxis.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QChartGlobal \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qchartglobal.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qtcharts-config.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qtchartsexports.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QFont \
+  /opt/homebrew/lib/QtCore.framework/Headers/QVariant \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QChart \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qchart.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QAbstractSeries \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qabstractseries.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QLegend \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qlegend.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicswidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicslayoutitem.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpainterpath.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QBrush \
+  /opt/homebrew/lib/QtCore.framework/Headers/QMargins \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QChartView \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qchartview.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QGraphicsView \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsview.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpainter.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QLineSeries \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qlineseries.h \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QXYSeries \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qxyseries.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QImage \
+  /opt/homebrew/lib/QtCharts.framework/Headers/QValueAxis \
+  /opt/homebrew/lib/QtCharts.framework/Headers/qvalueaxis.h \
+  /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/include/main.moc \
   /opt/homebrew/lib/QtCore.framework/Headers/qtmochelpers.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtmocconstants.h \
   /opt/homebrew/lib/QtCore.framework/Headers/q20algorithm.h \

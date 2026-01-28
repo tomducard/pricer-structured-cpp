@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured
+CMAKE_SOURCE_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build
+CMAKE_BINARY_DIR = /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build
 
 # Utility rule file for pricer_gui_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/pricer_gui_autogen: pricer_gui_autogen/timestamp
 
 pricer_gui_autogen/timestamp: /opt/homebrew/share/qt/libexec/moc
 pricer_gui_autogen/timestamp: CMakeFiles/pricer_gui_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pricer_gui"
-	/opt/homebrew/bin/cmake -E cmake_autogen /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles/pricer_gui_autogen.dir/AutogenInfo.json ""
-	/opt/homebrew/bin/cmake -E touch /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/pricer_gui_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pricer_gui"
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles/pricer_gui_autogen.dir/AutogenInfo.json ""
+	/opt/homebrew/bin/cmake -E touch /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/pricer_gui_autogen/timestamp
 
 CMakeFiles/pricer_gui_autogen.dir/codegen:
 .PHONY : CMakeFiles/pricer_gui_autogen.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/pricer_gui_autogen.dir/clean:
 .PHONY : CMakeFiles/pricer_gui_autogen.dir/clean
 
 CMakeFiles/pricer_gui_autogen.dir/depend:
-	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured/build/CMakeFiles/pricer_gui_autogen.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui_autogen
+	cd /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build /Users/tomducard/Documents/ENSAE/C++/pricer-structured-group/build/CMakeFiles/pricer_gui_autogen.dir/DependInfo.cmake "--color=$(COLOR)" pricer_gui_autogen
 .PHONY : CMakeFiles/pricer_gui_autogen.dir/depend
 
